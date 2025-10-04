@@ -1,0 +1,27 @@
+.container-header{
+    background-color: #14185c;
+    text-align: center;
+    color: #f2eae6;
+    padding: 10px;
+    width: 100%;
+}
+
+.container-header img{
+    width: 30rem;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container-nav{
+    background-color: #21257a;
+    padding: 10px;
+    text-align: center;
+}
+.container-nav a{
+    text-decoration: none;
+    color: #f2eae6;
+    font-size: 1.5rem;
+}
