@@ -18,7 +18,7 @@
                 <a href="">Configuración</a>
             </div>
                 <div class="container-body">
-                    <h2>Creacion de Tarea</h2>
+                    <h2>Creacion de Tarea</h2><hr>
                     <div class="form-crearTarea">
                     <p class="label">Nombre de la tarea:</p>
                     <input type="text" placeholder="Ej: Integrales" id="tareanombrereg" class="inputlog"><hr>
@@ -50,19 +50,24 @@
                     <input type="radio" name="complejidadtarea" id="complejidad2">
                     <label for="complejidad3">Corta</label>
                     <hr>
-                    <p class="label1">Semestre:</p>
-                    <input type="radio" name="semestrereg" id="semestre1">
-                    <label for="semestre1">1</label>
-                    <input type="radio" name="semestrereg" id="semestre2">
-                    <label for="semestre2">2</label>
-                    <input type="radio" name="semestrereg" id="semestre3">
-                    <label for="semestre3">3</label>
-                    <input type="radio" name="semestrereg" id="semestre4">
-                    <label for="semestre4">4</label>
-                    <input type="radio" name="semestrereg" id="semestre5">
-                    <label for="semestre5">5</label>
-                    <input type="radio" name="semestrereg" id="semestre6">
-                    <label for="semestre6">6</label><hr>
+                    <p class="label1">Tipo de trabajo:</p>
+                    <input type="radio" name="tipodet" id="tipodet1">
+                    <label for="tipodet1">En equipo</label>
+                    <input type="radio" name="tipodet" id="tipodet2">
+                    <label for="tipodet2">Individual</label>
+                    <p class="label1">Fecha de entrega</p>
+                    <input type="date" id="fechaentrega">
+                    <p class="label1">Nivel de Prioridad</p>
+                    <input type="radio" name="nivelprio" id="nivelprio1">
+                    <label for="nivelprio1">Alta</label>
+                    <input type="radio" name="nivelprio" id="nivelprio2">
+                    <label for="nivelprio2">Media</label>
+                    <input type="radio" name="nivelprio" id="nivelprio3">
+                    <label for="nivelprio3">Baja</label>
+                    <p class="label1">Tiempo entre recordatorio</p>
+                    <input type="text" id="lapsorecordatorio" onkeypress="return validartiempo(event)" placeholder="Ej: 1w 1d 1h">
+                    <p class="label1">Instrucciones</p>
+                    <input type="text" id="Instrucciones" class="inputlog" placeholder="Descripcion de la tarea">
                     </div>
 
                     <div class="container-btn">
@@ -71,5 +76,6 @@
                     <a href="../PostLogin/postlog.html"><button>Regresar</button></a>  
                     </div>
                 </div>
+                <script src="./js/ctarea.js"></script>
 </body>
 </html>

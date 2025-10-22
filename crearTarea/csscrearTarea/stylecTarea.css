@@ -44,7 +44,7 @@ body{
     margin-left: 4rem;
     margin-right: 4rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    background-color: #f2eae6;
+    background-color: #ffffff;
 }
 .container-btn{
     display: flex;
@@ -89,8 +89,8 @@ button:active{
 }
 
 .form-crearTarea{
-    background-color: #14185c;
-    color: #f2eae6;
+    background-color: #ffffff;
+    color: #14185c;
     text-align: left;
     border-radius: 15px;
     height: auto;
@@ -101,4 +101,10 @@ button:active{
     font-size: 15px;
     padding: 20px;
     margin-top: 30px;
+    border: 2px solid #666262 ;
+    border-style: dashed;
+}
+
+.inputlog{
+    width: 90%;
 }
