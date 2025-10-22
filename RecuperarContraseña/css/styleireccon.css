@@ -81,7 +81,7 @@ button:active{
     border: 1px solid #000;
 }
 
-.stylereccon{
+.correoperdido{
     margin-top: 20px;
     font-size: 18px;
     display: flex;   
@@ -90,7 +90,7 @@ button:active{
 }
 
 
-.stylereccon:hover{
+.correoperdido:hover{
     color: #0091d9;
 }
 
