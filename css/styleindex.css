@@ -7,6 +7,7 @@ body{
     background: #14185c;
     background: linear-gradient(to right, #14185c, #0091d9);
     padding: 10px;
+    border-bottom: 1px solid #000;
 }
 .container-nav{
     display: flex;
@@ -14,8 +15,9 @@ body{
     justify-content: center;
 }
 
-.logo img{
+.container-logo img{
     width: 70%;
+    margin-left: 20px;
 }
 
 .container-header a{
@@ -30,18 +32,13 @@ body{
 }
 
 .vacio{
-    width: 130%;
+    width: 80%;
 }
 
 .enlace a:hover{
-    width: 100%;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
     border-bottom: 2px solid white;
 }
 .enlace a{
-    width: 100%;
     padding: 10px;
     margin: 10px;
     text-align: center;
@@ -58,15 +55,22 @@ body{
 }
 
 .slogan .h1primero{
-    font-size: 40px;
+    font-size: 30px;
     color: #0091d9;
     margin-bottom: 0;
     font-weight: bold;
+    margin-top: 0;
+    text-shadow: 1.5px 1px 2px gray;
 }
 .slogan .h2segundo{
-    font-size: 40px;
+    font-size: 30px;
     margin-top: 0;
     font-weight: bold;
+    text-shadow: 1.5px 1px 2px gray;
+}
+
+.slogan{
+    margin-left: 30px;
 }
 
 .container-descripcion{
@@ -78,27 +82,98 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    padding: 10px;
+    text-align: center;
 }
 
 .container-servicios1{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    flex-wrap: wrap;
-    border: 3px solid #0091d9;
-    width: 20%;
+    padding: 15px;
+    width: 30%; 
+    flex-grow: 1; 
     text-align: center;
     margin: 20px;
     border-radius: 30px;
-    height: 300px;
+    flex-direction: column;
+    border: 3px solid #0091d9;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.1);
 }
 
 h2{
     font-weight: bold;
+    text-align: left;
+    font-family: sans-serif;
+    margin-left: 30px;
 }
 
-.imgservicios{
+.h3-1{
+    width: 40%;
+    color: gray;
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-left: 30px;
+}
+
+.h3-2{
+    color: black;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+h4{
+    color: gray;
+    font-family: sans-serif;
+    font-size: 15px;  
+}
+
+footer{
+    background: #14185c;
+    background: linear-gradient(to right, #14185c, #0091d9);
+    padding: 10px;
+    border-top: 1px solid #000;
+    width: 100%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+ .container-redes img{
+    width: 40px;
+    border-radius: 15px;
+}
+.container-redes a{
+    width: 100;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.container-redes a:hover{
+    border-bottom: 2px solid white;
+
+}
+ .container-redes{
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.container-enlace{
+    width: 33%;
+}
+
+.container-enlace a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.container-enlace a:hover{
+    border-bottom: 2px solid white;
+}
+
+.container-vacio{
+    width: 33%;
 }
