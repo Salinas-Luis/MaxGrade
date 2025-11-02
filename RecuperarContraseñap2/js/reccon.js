@@ -1,11 +1,3 @@
-function validaru(e){
-    var teclado = document.all ? e.keycode : e.which
-    if(teclado === 8) return true;
-    var regex = /[a-zA-Z0-9\s]/
-    var codigo = String.fromCharCode(teclado);
-    return regex.test(codigo);
-}
-
 function validarc(e){
     var teclado = document.all ? e.keycode : e.which
     if(teclado === 8) return true;

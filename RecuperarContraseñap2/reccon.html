@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MaxGrade</title>
-    <link rel="stylesheet" href="./css/styleindex.css">
+    <title>Registro</title>
+    <link rel="stylesheet" href="./css/stylereccon.css">
     <script src="https://kit.fontawesome.com/101326ea39.js"></script>
 </head>
 <body>
@@ -25,31 +25,27 @@
 
                 </div>
             </div>
-                <div class="user-login">
-                <div class="container-logo-login">
-                    <img src="../img/LogoPng.png" alt="">
-                </div>
-                <div class="container-userid">
-                    <div class="buttons">
-                    <a href="./login.html">
-                        Iniciar sesion
-                    </a>
-                    <a href="../Registro/registro.html">
-                        Registro
-                    </a>
+                <div class="user-reccon">
+                    <div class="container-logo-reccon">
+                        <img src="../img/LogoPng.png" alt="">
                     </div>
-                    <div class="inputlog">
-                    <i class="fa-solid fa-user"></i><input type="text" placeholder="Usuario o Correo" id="logincu" class="inputlog" onkeypress="return validaru(event)">
+                    <div class="container-userid">
+                        <div class="buttons">
+                        <a href="../Login/login.html">
+                            Iniciar sesión
+                        </a>
+                        <a href="../Registro/registro.html">
+                            Registro
+                        </a>
+                        </div>
+                        <div class="inputreccon">Ingrese su nueva Contraseña:</div>
+                        <div class="inputlog">
+                        <i class="fa-solid fa-lock"></i><input type="password" placeholder="Contraseña" id="loginpass" class="inputreccon" onkeypress="return validarc(event)"><i class="fa-solid fa-eye" id="togglePassword"></i>
+                        </div>
+                        <a href="../index.html" class="btn_reccon">Recuperar Contraseña</a>
+                        </div>
                     </div>
-                    <div class="inputlog" id="loginpass1">
-                    <i class="fa-solid fa-lock"></i><input type="password" placeholder="Contraseña" id="loginpass" class="inputlog" onkeypress="return validarc(event)"><i class="fa-solid fa-eye" id="togglePassword"></i>
-                    </div>
-                    
-                    <a href="../RecuperarContraseña/reccon.html" class="stylereccon">Recuperar Contraseña</a>
-                    <a href="../PostLogin/postlog.html" class="btn_iniciar">Iniciar Sesion</a>
                 </div>
-                </div>
-
                 <div class="container-footer">
                     <footer>
                         <div class="container-enlace">
@@ -64,7 +60,6 @@
                         </div>
                     </footer>
                 </div>  
-        
-    <script src="./loginjs/login.js"></script>
+                <script src="./js/reccon.js"></script>
 </body>
 </html>

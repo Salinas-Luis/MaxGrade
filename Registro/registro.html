@@ -5,51 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="./css/stylereg.css">
+    <script src="https://kit.fontawesome.com/101326ea39.js"></script>
 </head>
 <body>
-     <div class="container-main">
-        <div class="container-header">
-            <img src="../img/maxgrade1.jpg" alt=""> 
-            <h2>Registro de Cuenta</h2>
-        </div>
-                <div class="container-userid">
-                    <p class="label">Nombre de usuario:</p>
-                    <input type="text" placeholder="Usuario1234" id="userreg" class="inputlog"><hr>
-                    <p class="label1">Contraseña:</p>
-                    <input type="password" placeholder="Ej: Hola1234" id="passreg" class="inputlog"><hr>
-                    <p class="label1">Correo Electronico:</p>
-                    <input type="email" placeholder="Ej: usuario1234@gmail.com" id="correoreg" class="inputlog"><hr>
-                    <p class="label1">Boleta:</p>
-                    <input type="number" placeholder="Ej: 2024123456" id="boletareg" class="inputlog"><hr>
-                    <p class="label1">Semestre:</p>
-                    <input type="radio" name="semestrereg" id="semestre1">
-                    <label for="semestre1">1</label>
-                    <input type="radio" name="semestrereg" id="semestre2">
-                    <label for="semestre2">2</label>
-                    <input type="radio" name="semestrereg" id="semestre3">
-                    <label for="semestre3">3</label>
-                    <input type="radio" name="semestrereg" id="semestre4">
-                    <label for="semestre4">4</label>
-                    <input type="radio" name="semestrereg" id="semestre5">
-                    <label for="semestre5">5</label>
-                    <input type="radio" name="semestrereg" id="semestre6">
-                    <label for="semestre6">6</label><hr>
-                </div>
-                        <div class="button">
-                            <a href="" class="btn_sesiones">
-                            <button>
-                                <p>Registrarse</p>
-                            </button>
-                            </a>
-                            <a href="../index.html" class="btn_sesiones">
-                                <button>
-                                    <p>Volver al inicio</p>
-                                </button>
-                            </a>
-                         </div>
-                    <div class="container-footer">
-                        
+            <div class="container-header">
+                <div class="container-nav">
+                    <div class="container-logo">
+                        <a href="../index.html">
+                        <img src="../img/maxgradeplacapng.png" alt="XD no esta la imagen">   
+                        </a>
                     </div>
-    </div>   
+                    <div  class="vacio">
+
+                    </div>
+                    <div class="enlace">
+                        <a href="../Login/login.html">Inicio de Sesión</a>
+                        <a href="./contacto/contacto.html" class="enlace3">Contacto</a>
+                    </div>
+
+                </div>
+            </div>
+                <div class="user-reg">
+                    <div class="container-logo-reg">
+                        <img src="../img/LogoPng.png" alt="">
+                    </div>
+                    <div class="container-userid">
+                        <div class="buttons">
+                        <a href="../Login/login.html">
+                            Iniciar sesion
+                        </a>
+                        <a href="../Registro/registro.html">
+                            Registro
+                        </a>
+                        </div>
+                        <div class="inputreg"><i class="fa-solid fa-user"></i> Nombre de usuario:</div>
+                        <input type="text" placeholder="Usuario1234" id="userreg" class="inputlog">
+                        <div class="inputreg"><i class="fa-solid fa-lock"></i> Contraseña:</div>
+                        <input type="password" placeholder="Ej: Hola1234" id="passreg" class="inputlog">
+                        <div class="inputreg"><i class="fa-solid fa-paper-plane"></i> Correo:</div>
+                        <input type="email" placeholder="Ej: usuario1234@gmail.com" id="correoreg" class="inputlog">
+                        <div class="inputreg"><i class="fa-solid fa-key"></i> Boleta:</div>
+                        <input type="number" placeholder="Ej: 2024123456" id="boletareg" class="inputlog">
+                        <div class="inputreg"><i class="fa-solid fa-calendar-days"></i> Semestre:</div>
+                        <div class="semestre">
+                        <input type="radio" name="semestrereg" id="semestre1">
+                        <label for="semestre1">1</label>
+                        <input type="radio" name="semestrereg" id="semestre2">
+                        <label for="semestre2">2</label>
+                        <input type="radio" name="semestrereg" id="semestre3">
+                        <label for="semestre3">3</label>
+                        <input type="radio" name="semestrereg" id="semestre4">
+                        <label for="semestre4">4</label>
+                        <input type="radio" name="semestrereg" id="semestre5">
+                        <label for="semestre5">5</label>
+                        <input type="radio" name="semestrereg" id="semestre6">
+                        <label for="semestre6">6</label>
+                        </div>
+                        <a href="../index.html" class="btn_reg">Registrarse</a>
+                    </div>
+                </div>
+                <div class="container-footer">
+                    <footer>
+                        <div class="container-enlace">
+                            <a href="">¿Qué es MaxGrade?</a>
+                        </div>
+                        <div class="container-vacio">
+                            
+                        </div>
+                        <div class="container-redes">
+                            <a href=""><img src="../img/instapng.png" alt=""></a>
+                            <a href=""><img src="../img/facebookpng.png" alt=""></a>
+                        </div>
+                    </footer>
+                </div>  
+
 </body>
 </html>
