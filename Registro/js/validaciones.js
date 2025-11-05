@@ -21,6 +21,7 @@ var teclado = document.all ? e.keyCode : e.which;
         return false; 
     }
     if (codigo === ' ') {
+        alert("Por favor rellene el campo de usuario")
         return false;
     }
     return true;
@@ -40,6 +41,7 @@ function validarc(e){
         return false; 
     }
     if (codigo === ' ') {
+        alert("Por favor rellene el campo de contraseña")
         return false;
     }
 
@@ -55,13 +57,14 @@ function validarc(e){
         alert("La cantidad de caracteres no puede superar 12")
         return false; 
     }
-    
     return true;
 }
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const togglePassword = document.querySelector('#togglePassword');
-    const password = document.querySelector('#loginpass');
+    const password = document.querySelector('#passreg');
 
     if (togglePassword && password) {
         togglePassword.addEventListener('click', function (e) {
@@ -73,11 +76,83 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-function validars(){
-    var user = document.getElementById("logincu").value;
-    var password = document.getElementById("loginpass").value;
+
+function validarCorreoRegistro() {
+    var inputCorreo = document.getElementById("correoreg"); 
+    var correo = inputCorreo.value.trim(); 
+    var regexCorreo = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+    if (correo === "") {
+        alert("El campo de Correo no puede estar vacío.");
+        inputCorreo.focus();
+        return false;
+    }
+    
+    if (!regexCorreo.test(correo)) {
+        alert("Formato de correo electrónico inválido. Asegúrate de usar el formato usuario@dominio.com.");
+        inputCorreo.focus();
+        return false;
+    }
+
+    return true;
+}
+
+function validarBoletaRegistro() {
+    var inputBoleta = document.getElementById("boletareg");
+    var boleta = inputBoleta.value.trim(); 
+    var regexBoleta = /^\d{10}$/;
+
+    if (boleta === "") {
+        alert("Por favor, ingresa tu número de Boleta (10 dígitos).");
+        inputBoleta.focus();
+        return false;
+    }
+    
+    if (!regexBoleta.test(boleta)) {
+        alert("El formato de Boleta es incorrecto. Debe contener exactamente 10 dígitos numéricos.");
+        inputBoleta.focus();
+        return false;
+    }
+    
+    return true;
+}
+
+function validarSemestre() {
+    var radios = document.getElementsByName("semestrereg");
+    var seleccionado = false;
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            seleccionado = true;
+            break;
+        }
+    }
+    
+    if (!seleccionado) {
+        alert("Debes seleccionar el Semestre actual (1 al 6).");
+        document.getElementById("semestre1").focus(); 
+        return false;
+    }
+    
+    return true;
+}
+
+
+function validarFormularioRegistro() {
+    var user = document.getElementById("userreg").value;
+    var password = document.getElementById("passreg").value;
+    if (!validarCorreoRegistro()) {
+        return false;
+    }
+    
+    if (!validarBoletaRegistro()) {
+        return false;
+    }
+
+    if (!validarSemestre()) {
+        return false;
+    }
     if(user === ""){
-        alert("Por favor, rellene el campo de usuario")
+        alert("Por favor rellene el campo de usuario")
         return false;
     }
     if(user.length<8){
@@ -92,7 +167,6 @@ function validars(){
         alert("Ingrese 8 o más caracteres en el contraseña")
         return false;
     }
-    alert("Inicio de sesión exitoso!")
+    alert("Registro exitoso, volviendo al menu principal...")
     return true;
 }
-

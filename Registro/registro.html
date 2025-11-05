@@ -40,11 +40,11 @@
                         </div>
                         <p style="font-size: 18px;">Registrar cuenta:</p>
                         <div class="inputreg"><i class="fa-solid fa-user"></i> Nombre de usuario:</div>
-                        <input type="text" placeholder="Usuario1234" id="userreg" class="inputlog">
+                        <input type="text" placeholder="De 8 a 16  caracteres" id="userreg" class="inputlog" onkeypress="return validaru(event)">
                         <div class="inputreg"><i class="fa-solid fa-lock"></i> Contraseña:</div>
-                        <input type="password" placeholder="Ej: Hola1234" id="passreg" class="inputlog">
+                        <div class="inputpass"><input type="password" placeholder="De 8 a 12 caracteres" id="passreg" class="inputlog" onkeypress="return validarc(event)"><i class="fa-solid fa-eye" id="togglePassword"></i></div>
                         <div class="inputreg"><i class="fa-solid fa-paper-plane"></i> Correo:</div>
-                        <input type="email" placeholder="Ej: usuario1234@gmail.com" id="correoreg" class="inputlog">
+                        <input type="email" placeholder="Ej: usuario1234@gmail.com" id="correoreg" class="inputlog" onkeypress="return validarcorreo()">
                         <div class="inputreg"><i class="fa-solid fa-key"></i> Boleta:</div>
                         <input type="number" placeholder="Ej: 2024123456" id="boletareg" class="inputlog">
                         <div class="inputreg"><i class="fa-solid fa-calendar-days"></i> Semestre:</div>
@@ -62,7 +62,7 @@
                         <input type="radio" name="semestrereg" id="semestre6">
                         <label for="semestre6">6</label>
                         </div>
-                        <a href="../index.html" class="btn_reg">Registrarse</a>
+                        <a href="../index.html" class="btn_reg" onclick="return validarFormularioRegistro()">Registrarse</a>
                     </div>
                 </div>
                 <div class="container-footer">
@@ -79,6 +79,6 @@
                         </div>
                     </footer>
                 </div>  
-
+                <script src="./js/validaciones.js"></script>
 </body>
 </html>
