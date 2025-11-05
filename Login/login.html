@@ -40,14 +40,14 @@
                     </div>
                     <div class="inputlog">
                         <p style="font-size: 18px;">Iniciar Sesion:</p>
-                    <i class="fa-solid fa-user"></i><input type="text" placeholder="Usuario o Correo" id="logincu" class="inputlog" onkeypress="return validaru(event)">
+                    <i class="fa-solid fa-user"></i><input type="text" placeholder="Ej: nombre_usuario.123" id="logincu" class="inputlog" onkeypress="return validaru(event)">
                     </div>
                     <div class="inputlog" id="loginpass1">
                     <i class="fa-solid fa-lock"></i><input type="password" placeholder="Contraseña" id="loginpass" class="inputlog" onkeypress="return validarc(event)"><i class="fa-solid fa-eye" id="togglePassword"></i>
                     </div>
                     
                     <a href="../RecuperarContraseña/reccon.html" class="stylereccon">Recuperar Contraseña</a>
-                    <a href="../PostLogin/postlog.html" class="btn_iniciar">Iniciar Sesion</a>
+                    <a href="../PostLogin/postlog.html" class="btn_iniciar" onclick="return validars()">Iniciar Sesion</a>
                 </div>
                 </div>
 
