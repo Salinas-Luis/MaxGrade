@@ -1,3 +1,8 @@
+
+html {
+    height: 100%;
+}
+
 body{
     padding: 0;
     margin: 0;
@@ -6,22 +11,29 @@ body{
     background-position: center bottom;
     background-size: cover;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 480px; 
 }
 
 .container-header{
     background: #14185c;
-    background: linear-gradient(to right, #14185c, #0091d9);
     padding: 10px;
     border-bottom: 1px solid #000;
+    flex-shrink: 0; 
+    flex-grow: 0;
 }
 .container-nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 450px; 
+    margin: 0 auto; 
 }
 
 .container-logo img{
-    width: 60vh;
+    width: 200px; 
     margin-left: 20px;
 }
 
@@ -34,6 +46,7 @@ body{
     width: 70%;
     display: flex;
     justify-content: space-between;
+    min-width: 300px;
 }
 
 .vacio{
@@ -49,41 +62,42 @@ body{
     margin: 10px;
     text-align: center;
     width: 50%;
-    font-size: 2.1vh;
+    font-size: 1.1rem; 
+    min-width: 80px; 
 }
 
 .enlace3{
-    background-color: black;  
-      border-radius: 30px;
+    background-color: black; 
+    border-radius: 30px;
 }
-
 footer{
     background: #14185c;
-    background: linear-gradient(to right, #14185c, #0091d9);
     border-top: 1px solid #000;
     width: 100%; 
     display: flex; 
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 2.1vh;
+    font-size: 1rem;
+    flex-shrink: 0; 
+    flex-grow: 0;
+    min-width: 480px; 
 }
 
- .container-redes img{
-    width: 5vh;
+.container-redes img{
+    width: 30px;
     border-radius: 15px;
+    min-width: 30px; 
 }
 .container-redes a{
     width: auto;
     padding: 10px;
     margin-left: 5px;
-
 }
 .container-redes a:hover{
     border-bottom: 2px solid white;
-
 }
- .container-redes{
+.container-redes{
     width: 32%;
     display: flex;
     align-items: center;
@@ -107,8 +121,39 @@ footer{
 .container-vacio{
     width: 33%;
 }
-.container-userid{
+.user-reg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+    margin: 40px;
+    flex-grow: 1; 
+}
+
+.container-logo-reg{
     text-align: center;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2eae6;
+    margin-top: 20px;
+    border-radius: 20px 0px 0px 20px;
+    margin-bottom: 20px;
+    height: 600px;
+    max-height: 700px;
+    min-height: 250px;
+    min-width: 350px;
+}
+.container-logo-reg img{
+    width: 80%;
+    height: 80%;
+    margin: 0; 
+    padding: 0;
+    display: block;
+}
+.container-userid{
+   text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,8 +162,11 @@ footer{
     margin-top: 30px;
     border-radius: 0px 20px 20px 0px;
     margin-bottom: 30px;
-    height: 60vh;
+    height: 600px;
+    max-height: 700px;
+    min-height: 350px;
     width: 35%;
+    min-width: 350px;
 }
 
 .buttons{
@@ -126,7 +174,7 @@ footer{
     align-items: center;
     justify-content: center;
     margin-top: 50px;
-    font-size: 2vh;
+    font-size: 1rem; 
 }
 .buttons a{
     padding: 4px;
@@ -134,6 +182,9 @@ footer{
     color: black;
     text-decoration: none;
     font-family: sans-serif;
+    min-width: 100px;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.1);
+    font-size: 1rem;
 }
 .buttons a:hover{
     border-bottom: 2px solid #000;
@@ -142,7 +193,7 @@ footer{
 .inputlog{
     width: 70%;
     margin: 5px;
-    font-size: 2vh;
+    font-size: 1rem;
 }
 
 .inputlog:focus{
@@ -155,7 +206,6 @@ button{
     border: 1px solid #000;
     border-radius: 10px;
     width: 100%;
-    font-size: 15px;
     margin: 10px;
     margin-top: 20px;
 }
@@ -169,31 +219,7 @@ button:active{
     background-color: #00577f;
     border: 1px solid #000;
 }
-.user-reg{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    margin: 40px;
-}
-.container-logo-reg{
-    text-align: center;
-    width: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f2eae6;
-    margin-top: 20px;
-    border-radius: 20px 0px 0px 20px;
-    margin-bottom: 20px;
-    height: 60vh;
-}
-.container-logo-reg img{
-    width: 80%;
-    height: 80%;
-    margin-top: 162px;
-    padding: 50px;
-}
+
 .button{
     width: 50%;
     display: flex;
@@ -210,19 +236,19 @@ button:active{
     width: 50%;
     border-radius: 10px;
     margin-bottom: 50px;
-    font-size: 2vh;
+    font-size: 1rem;
 }
 .semestre{
     margin-bottom: 50px;
 }
 .semestre input, label{
     margin: 5px;
-    font-size: 2vh;
+    font-size: 1rem;
 }
 .inputreg{
     width: 70%;
     margin: 5px;
     font-family: sans-serif;
-    font-size: 2vh;
+    font-size: 1rem;
     text-align: left;
 }

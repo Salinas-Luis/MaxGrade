@@ -1,3 +1,8 @@
+
+html {
+    height: 100%;
+}
+
 body{
     padding: 0;
     margin: 0;
@@ -6,22 +11,28 @@ body{
     background-position: center bottom;
     background-size: cover;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 480px; 
 }
 
 .container-header{
     background: #14185c;
-    background: linear-gradient(to right, #14185c, #0091d9);
     padding: 10px;
     border-bottom: 1px solid #000;
+    flex-shrink: 0; 
+    flex-grow: 0;
 }
 .container-nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 450px;
 }
 
 .container-logo img{
-    width: 60vh;
+    width: 200px; 
     margin-left: 20px;
 }
 
@@ -34,6 +45,7 @@ body{
     width: 70%;
     display: flex;
     justify-content: space-between;
+    min-width: 300px; 
 }
 
 .vacio{
@@ -49,41 +61,43 @@ body{
     margin: 10px;
     text-align: center;
     width: 50%;
-    font-size: 2vh;
+    font-size: 1.1rem; 
+    min-width: 80px; 
 }
 
 .enlace3{
-    background-color: black;  
-      border-radius: 30px;
+    background-color: black; 
+    border-radius: 30px;
 }
 
 footer{
     background: #14185c;
-    background: linear-gradient(to right, #14185c, #0091d9);
     border-top: 1px solid #000;
     width: 100%; 
     display: flex; 
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 2vh;
+    font-size: 1rem;
+    flex-shrink: 0; 
+    flex-grow: 0;
+    min-width: 480px; 
 }
 
- .container-redes img{
-    width: 5vh;
+.container-redes img{
+    width: 40px;
     border-radius: 15px;
+    min-width: 30px; 
 }
 .container-redes a{
     width: auto;
     padding: 10px;
     margin-left: 5px;
-
 }
 .container-redes a:hover{
     border-bottom: 2px solid white;
-
 }
- .container-redes{
+.container-redes{
     width: 32%;
     display: flex;
     align-items: center;
@@ -107,9 +121,35 @@ footer{
 .container-vacio{
     width: 33%;
 }
+.container-body {
+    flex-grow: 1; 
+}
+.user-reccon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 40px;
+    flex-grow: 1; 
+    flex-wrap: wrap; 
+    min-width: 650px; 
+    max-width: 1000px;
+    margin: 40px auto; 
+}
+
+.container-userid, .container-logo-reccon {
+    height: 600px; 
+    min-height: 350px;
+    flex-basis: 850px;
+    max-width: 50%; 
+    flex-shrink: 1;
+    margin-left: auto; 
+    margin-right: auto; 
+    min-width: 300px; 
+}
+
 .container-userid{
     text-align: center;
-    width: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,7 +158,6 @@ footer{
     margin-top: 20px;
     border-radius: 0px 20px 20px 0px;
     margin-bottom: 20px;
-    height: 60vh;
 }
 
 .buttons{
@@ -133,17 +172,26 @@ footer{
     color: black;
     text-decoration: none;
     font-family: sans-serif;
-    font-size: 2vh;
+    font-size: 1rem;
     margin-bottom: 30px;
+    min-width: 100px; 
+    box-shadow: 0 10px 28px rgba(0,0,0,0.1);
 }
 .buttons a:hover{
     border-bottom: 2px solid #000;
 }
+.label{
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+.label1{
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
 
 .inputlog{
-    width: 100%;
+    width: 70%;
     margin: 5px;
-    font-size: 2vh;
 }
 
 .inputlog:focus{
@@ -156,7 +204,7 @@ button{
     border: 1px solid #000;
     border-radius: 10px;
     width: 100%;
-    font-size: 2vh;
+    font-size: 1rem;
     margin: 10px;
     margin-top: 20px;
 }
@@ -170,16 +218,8 @@ button:active{
     background-color: #00577f;
     border: 1px solid #000;
 }
-.user-reccon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    margin: 40px;
-}
 .container-logo-reccon{
     text-align: center;
-    width: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,7 +227,6 @@ button:active{
     margin-top: 20px;
     border-radius: 20px 0px 0px 20px;
     margin-bottom: 20px;
-    height: 60vh;
 }
 .container-logo-reccon img{
     width: 80%;
@@ -212,15 +251,21 @@ button:active{
     border-radius: 10px;
     margin-top: 30px;
     margin-bottom: 50px;
-    font-size: 2vh;
+    font-size: 1rem;
+}
+.semestre{
+    margin-bottom: 50px;
+}
+.semestre input, label{
+    margin: 5px;
 }
 .inputreccon{
-    width: 70%;
+    width: 85%;
     margin: 5px;
     font-family: sans-serif;
-    font-size: 2vh;
+    font-size: 1rem;
     text-align: left;
 }
-#togglePassword {
-    cursor: pointer; 
+#divreccon{
+    margin-left: 15%;
 }
