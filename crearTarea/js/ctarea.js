@@ -138,6 +138,10 @@ function validarForm() {
         alert("Rellene las instrucciones")
         return false;
     }
+    if(Instrucciones.length>=200){
+        alert("Las instrucciones deben tener menos de 200 caracteres")
+        return false;
+    }
     if (!validarPrioridad()) {
         return false;
     }
@@ -146,6 +150,29 @@ function validarForm() {
     }
     
     return true;
+}
+function guardarTarea() {
+    if (validarForm()) {
+        const taskId = Date.now();
+        const datosTarea = {
+            id: taskId,
+            nombre: document.getElementById("tareanombrereg").value,
+            materia: document.getElementById("catalogomaterias").value,
+            fecha: document.getElementById("fechaentrega").value,
+            prioridad: document.querySelector('input[name="nivelprio"]:checked') 
+                       ? document.querySelector('input[name="nivelprio"]:checked').labels[0].textContent 
+                       : 'No asignada',
+            instrucciones: document.getElementById("Instrucciones").value,
+        };
+        
+        let tareasGuardadas = JSON.parse(localStorage.getItem('tareas')) || [];
+        tareasGuardadas.push(datosTarea);
+        localStorage.setItem('tareas', JSON.stringify(tareasGuardadas));
+        window.location.href = "../PostLogin/postlog.html";
+        
+        return true; 
+    }
+    return false;
 }
 
 function resetearFormulario() {
