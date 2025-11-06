@@ -14,22 +14,28 @@
         </div>
             <div class="container-nav">
                 <a href="../Calendario/calendario.html">Calendario | </a>
-                <a href="../crearTarea/crearTarea.html">Crear Tarea | </a>
-                <a href="">Configuración</a>
+                <a href="../crearTarea/crearTarea.html">Crear Tarea  | </a>
+                <a href="../PostLogin/postlog.html">Tareas</a>
             </div>
                 <div class="container-body">
                     <h2>Creacion de Tarea</h2>
+                    <div class="divtipot"><button class="tipot" id="btn-individual">Individual</button> <button class="tipot" id="btn-equipo">En equipo</button></div>
                     <div class="form-crearTarea">
+                    <div id="contenedor-integrantes">
+
+                    </div>
                     <p class="label">Nombre de la tarea:</p>
-                    <input type="text" placeholder="Ej: Integrales" id="tareanombrereg" class="inputlog"><hr>
+                    <input type="text" placeholder="Ej: Integrales" id="tareanombrereg" class="inputlog" ><hr>
                     <hr>
-                    <p class="label1">Materia:</p>
+                    <label for="catalogomaterias">Materia:</label> <br>
+                    <select id="catalogomaterias">
+                        <option value="Calculo Integral">Cálculo Integral</option>
+                        <option value="Fisica III">Fisica III</option>
+                        <option value="Programacion Web">Programación Web</option>
+                        <option value="Pruebas de Software">Pruebas de Software</option>
+                        <option value="Química">Química</option>
+                    </select>
                     <hr>
-                    <p class="label1">Tipo de trabajo:</p>
-                    <input type="radio" name="tipodet" id="tipodet1">
-                    <label for="tipodet1">En equipo</label>
-                    <input type="radio" name="tipodet" id="tipodet2">
-                    <label for="tipodet2">Individual</label><hr>
                     <p class="label1">Fecha de entrega</p>
                     <input type="date" id="fechaentrega" class="inputlog"><hr>
                     <p class="label1">Nivel de Prioridad</p>
@@ -39,16 +45,13 @@
                     <label for="nivelprio2">Media</label>
                     <input type="radio" name="nivelprio" id="nivelprio3">
                     <label for="nivelprio3">Baja</label><hr>
-                    <p class="label1">Tiempo entre recordatorio</p>
-                    <input type="text" id="lapsorecordatorio" onkeypress="return validartiempo(event)" placeholder="Ej:1d 1h" class="inputlog"><hr>
                     <p class="label1">Instrucciones</p>
                     <input type="text" id="Instrucciones" class="inputlog" placeholder="Descripcion de la tarea"><hr>
                     </div>
-
                     <div class="container-btn">
-                    <button onclick="">Guardar</button>
-                    <button onclick="">Resetear</button>
+                    <a href="../PostLogin/postlog.html" onclick="return validarForm()"><button>Guardar</button></a>
                     <a href="../PostLogin/postlog.html"><button>Regresar</button></a>  
+                    <button onclick="resetearFormulario()">Resetear</button>
                     </div>
                 </div>
                 <script src="./js/ctarea.js"></script>

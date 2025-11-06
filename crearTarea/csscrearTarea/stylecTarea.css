@@ -7,19 +7,26 @@ body{
     background-color: #14185c;
     text-align: center;
     color: #f2eae6;
-    padding: 10px;
     width: 100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 .divimg img{
-    width: 100%;
     height: 80px;
 }
 .irperfil img{
+    width: 90px;
+    height: 80px;
+}
+.divacio{
+    width: 6%;
+}
+.divimg{
     width: 100%;
-    height: 60px;
+    text-align: center;
 }
 
 .container-nav{
@@ -31,7 +38,7 @@ body{
 .container-nav a{
     text-decoration: none;
     color: #f2eae6;
-    font-size: 18px; 
+    font-size: px; 
 }
 
 .container-body{
@@ -41,19 +48,22 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 10px;
- 
-    width: 90%; 
+    margin: 20px; 
+    width: 100%; 
     max-width: 1000px; 
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    background-color: #ffffff;
+    background-color: #f4f0f0;
 }
 .container-btn{
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+.container-btn a{
+    margin: 5px;
+    width: 100px;
 }
 button{
     background-color: #00577f;
@@ -104,11 +114,25 @@ button:active{
     max-width: 500px; 
     font-size: 18px;
     padding: 20px;
-    
     border: 2px solid #666262 ;
     border-style: dashed;
 }
 
 .inputlog{
     width: 90%;
+}
+
+.tipot{
+    width: 100%;
+    padding: 10px;
+
+}
+
+.divtipot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    min-width: 200px;
+    max-width: 400px;
 }
