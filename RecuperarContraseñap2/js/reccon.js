@@ -19,12 +19,18 @@ function validarc(e){
  
     if (caracteresEspeciales.includes(codigo)) {
         if (valorActual.includes(codigo)) {
-            alert("El carácter especial '" + codigo + "' solo puede usarse una vez."); 
+            Swal.fire({
+                title: "El carácter especial '" + codigo + "' solo puede usarse una vez.",
+                icon: "warning",
+            }) 
             return false; 
         }
     }
     if (valorFuturo.length > 12) {
-        alert("La cantidad de caracteres no puede superar 12")
+        Swal.fire({
+            title: "Ingrese de 8 a 12 caracteres en la contraseña.",
+            icon: "warning",
+        }) 
         return false; 
     }
     
@@ -33,14 +39,29 @@ function validarc(e){
 function validars(){
     var password = document.getElementById("userreg").value;
     if(password === ""){
-        alert("Por favor, rellene el campo de contraseña")
+        Swal.fire({
+            title: "El campo contraseña no puede estar vacío.",
+            icon: "warning",
+        }) 
         return false;
     }
     if(password.length<8){
-        alert("Ingrese 8 o más caracteres en el contraseña")
+        Swal.fire({
+            title: "Ingrese de 8 a 12 caracteres en la contraseña.",
+            icon: "warning",
+        }) 
         return false;
     }
-    return true;
+    Swal.fire({
+        title: "Cambio de contraseña Exitoso!",
+        icon: "success",
+        timer: 2000,
+        timerProgressBar: true
+    }) .then(() => {
+        window.location.href = "../index.html";
+    })
+    return false;
+
 }
 document.addEventListener('DOMContentLoaded', function() {
     const togglePassword = document.querySelector('#togglePassword');
