@@ -13,11 +13,17 @@ var teclado = document.all ? e.keyCode : e.which;
     }
     var conteoPuntos = (valorFuturo.match(/\./g) || []).length;
     if (conteoPuntos > 1) {
-        alert("La cantidad de puntos no puede ser mayor a 1")
+        Swal.fire({
+            title: "La cantidad de puntos no puede ser mayor a 1",
+            icon: "warning"
+        }) 
         return false; 
     }
     if (valorFuturo.length > 16) {
-        alert("La cantidad de caracteres no puede superar 16")
+        Swal.fire({
+            title: "Ingrese de 8 a 16 caracteres en usuario.",
+            icon: "warning"
+        }) 
         return false; 
     }
     if (codigo === ' ') {
@@ -47,12 +53,18 @@ function validarc(e){
  
     if (caracteresEspeciales.includes(codigo)) {
         if (valorActual.includes(codigo)) {
-            alert("El carácter especial '" + codigo + "' solo puede usarse una vez."); 
+            Swal.fire({
+                title: "El carácter especial '" + codigo + "' solo puede usarse una vez..",
+                icon: "warning"
+            }) 
             return false; 
         }
     }
     if (valorFuturo.length > 12) {
-        alert("La cantidad de caracteres no puede superar 12")
+        Swal.fire({
+            title: "Ingrese de 8 a 12 caracteres en contraseña.",
+            icon: "warning"
+        }) 
         return false; 
     }
     
@@ -77,22 +89,41 @@ function validars(){
     var user = document.getElementById("logincu").value;
     var password = document.getElementById("loginpass").value;
     if(user === ""){
-        alert("Por favor, rellene el campo de usuario")
+        Swal.fire({
+            title: "El campo usuario no puede estar vacio.",
+            icon: "warning"
+        }) 
         return false;
     }
     if(user.length<8){
-        alert("Ingrese 8 o más caracteres en el usuario")
+        Swal.fire({
+            title: "Ingrese de 8 a 16 caracteres en el usuario.",
+            icon: "warning"
+        }) 
         return false;
     }
     if(password === ""){
-        alert("Por favor, rellene el campo de contraseña")
+        Swal.fire({
+            title: "El campo contraseña no puede estar vacio.",
+            icon: "warning"
+        }) 
         return false;
     }
     if(password.length<8){
-        alert("Ingrese 8 o más caracteres en el contraseña")
+        Swal.fire({
+            title: "Ingrese de 8 a 12 caracteres en la contraseña.",
+            icon: "warning"
+        })
         return false;
     }
-    alert("Inicio de sesión exitoso!")
-    return true;
+    Swal.fire({
+        title: "Inicio de sesión exitoso!",
+        icon: "success",
+        timer: 2000,
+        timerProgressBar: true
+    }).then(() => {
+        window.location.href = "../PostLogin/postlog.html";
+    })
+    return false;
 }
 
