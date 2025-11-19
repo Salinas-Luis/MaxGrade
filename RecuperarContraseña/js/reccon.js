@@ -41,7 +41,7 @@ function validars(){
     var password = document.getElementById("userreg").value;
     if(password === ""){
         Swal.fire({
-            title: "El campo contraseña no puede estar vacío.",
+            title: "El campo Palabra de verificación no puede estar vacío.",
             icon: "warning",
         }) 
         return false;
