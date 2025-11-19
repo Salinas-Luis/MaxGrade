@@ -1,3 +1,4 @@
+
 function validaru(e){
 var teclado = document.all ? e.keyCode : e.which;
     if (teclado === 8) return true;
@@ -13,15 +14,24 @@ var teclado = document.all ? e.keyCode : e.which;
     }
     var conteoPuntos = (valorFuturo.match(/\./g) || []).length;
     if (conteoPuntos > 1) {
-        alert("La cantidad de puntos no puede ser mayor a 1")
+        Swal.fire({
+            title: "Por favor, ingrese solo un punto",
+            icon: "warning",
+        })
         return false; 
     }
     if (valorFuturo.length > 16) {
-        alert("La cantidad de caracteres no puede superar 16")
+        Swal.fire({
+            title: "La cantidad de caracteres debe ser menor a 16",
+            icon: "warning",
+        })
         return false; 
     }
     if (codigo === ' ') {
-        alert("Por favor rellene el campo de usuario")
+        Swal.fire({
+            title: "Por favor, rellene el campo usuario",
+            icon: "warning",
+        })
         return false;
     }
     return true;
@@ -41,7 +51,10 @@ function validarc(e){
         return false; 
     }
     if (codigo === ' ') {
-        alert("Por favor rellene el campo de contraseña")
+        Swal.fire({
+            title: "Por favor, rellene el campo de contraseña",
+            icon: "warning",
+        })
         return false;
     }
 
@@ -49,12 +62,18 @@ function validarc(e){
  
     if (caracteresEspeciales.includes(codigo)) {
         if (valorActual.includes(codigo)) {
-            alert("El carácter especial '" + codigo + "' solo puede usarse una vez."); 
+            Swal.fire({
+                title: "El carácter especial '" + codigo + "' solo puede usarse una vez.6",
+                icon: "warning",
+            }) 
             return false; 
         }
     }
     if (valorFuturo.length > 12) {
-        alert("La cantidad de caracteres no puede superar 12")
+        Swal.fire({
+            title: "La cantidad de caracteres en la contraseña no puede superar 12.",
+            icon: "warning",
+        }) 
         return false; 
     }
     return true;
@@ -83,13 +102,19 @@ function validarCorreoRegistro() {
     var regexCorreo = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
     if (correo === "") {
-        alert("El campo de Correo no puede estar vacío.");
+        Swal.fire({
+            title: "El campo correo no puede estar vacio.",
+            icon: "warning",
+        }) 
         inputCorreo.focus();
         return false;
     }
     
     if (!regexCorreo.test(correo)) {
-        alert("Formato de correo electrónico inválido. Asegúrate de usar el formato usuario@dominio.com.");
+        Swal.fire({
+            title: "Formato de correo invalido. Use el formato usuario@dominio.com",
+            icon: "warning",
+        }) 
         inputCorreo.focus();
         return false;
     }
@@ -103,13 +128,19 @@ function validarBoletaRegistro() {
     var regexBoleta = /^\d{10}$/;
 
     if (boleta === "") {
-        alert("Por favor, ingresa tu número de Boleta (10 dígitos).");
+        Swal.fire({
+            title: "El campo boleta no puede estar vacio.",
+            icon: "warning",
+        })         
         inputBoleta.focus();
         return false;
     }
     
     if (!regexBoleta.test(boleta)) {
-        alert("El formato de Boleta es incorrecto. Debe contener exactamente 10 dígitos numéricos.");
+        Swal.fire({
+            title: "Formato de boleta invalido, debe tener 10 digitos.",
+            icon: "warning",
+        }) 
         inputBoleta.focus();
         return false;
     }
@@ -128,7 +159,10 @@ function validarSemestre() {
     }
     
     if (!seleccionado) {
-        alert("Debes seleccionar el Semestre actual (1 al 6).");
+        Swal.fire({
+            title: "Seleccione el semestre actual",
+            icon: "warning",
+        }) 
         document.getElementById("semestre1").focus(); 
         return false;
     }
@@ -152,21 +186,36 @@ function validarFormularioRegistro() {
         return false;
     }
     if(user === ""){
-        alert("Por favor rellene el campo de usuario")
+        Swal.fire({
+            title: "El campo usuario no puede estar vacio.",
+            icon: "warning",
+        }) 
         return false;
     }
     if(user.length<8){
-        alert("Ingrese 8 o más caracteres en el usuario")
+        Swal.fire({
+            title: "Ingrese de 8 a 16 caracteres en usuario.",
+            icon: "warning",
+        }) 
         return false;
     }
     if(password === ""){
-        alert("Por favor, rellene el campo de contraseña")
+        Swal.fire({
+            title: "El campo contraseña no puede estar vacio.",
+            icon: "warning",
+        }) 
         return false;
     }
     if(password.length<8){
-        alert("Ingrese 8 o más caracteres en el contraseña")
+        Swal.fire({
+            title: "Ingrese de 8 a 12 caracteres en contraseña",
+            icon: "warning",
+        }) 
         return false;
     }
-    alert("Registro exitoso, volviendo al menu principal...")
+    Swal.fire({
+        title: "Registro exitoso.",
+        icon: "sucess",
+    }) 
     return true;
 }
