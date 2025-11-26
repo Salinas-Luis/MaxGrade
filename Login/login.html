@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MaxGrade</title>
     <link rel="stylesheet" href="./css/styleindex.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/101326ea39.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -12,6 +13,7 @@
             <div class="container-header">
                 <div class="container-nav">
                     <div class="container-logo">
+                        <!-- Logo de arriba a la izq -->
                         <a href="../index.html">
                         <img src="../img/maxgradeplacapng.png" alt="XD no esta la imagen">   
                         </a>
@@ -26,33 +28,16 @@
 
                 </div>
             </div>
-                <div class="user-login">
-                <div class="container-logo-login">
-                    <img src="../img/LogoPng.png" alt="">
-                </div>
-                <div class="container-userid">
-                    <div class="buttons">
-                    <a href="./login.html">
-                        Iniciar sesion
-                    </a>
-                    <a href="../Registro/registro.html">
-                        Registro
-                    </a>
+                <div class="row g-0 text-center user-login">
+                    <!-- Logo del lado izq -->
+                    <div class="col-sm-6 col-md-8 container-imglogo">
+                        <img src="../img/LogoPng.png" class="container-logogrande">
                     </div>
-                    <div class="inputlog">
-                        <p style="font-size: 18px;">Iniciar Sesion:</p>
-                    <i class="fa-solid fa-user"></i><input type="text" placeholder="De 8 a 16 caracteres" id="logincu" class="inputlog" onkeypress="return validaru(event)">
-                    </div>
-                    <div class="inputlog" id="loginpass1">
-                    <i class="fa-solid fa-lock"></i><input type="password" placeholder="De 8 a 12 caracteres" id="loginpass" class="inputlog" onkeypress="return validarc(event)"><i class="fa-solid fa-eye" id="togglePassword"></i>
-                    </div>
-                    
-                    <a href="../RecuperarContraseña/reccon.html" class="stylereccon">Recuperar Contraseña</a>
-                    <a href="../PostLogin/postlog.html" class="btn_iniciar" onclick="return validars()">Iniciar Sesion</a>
+                    <!-- Form del lado derecho -->
+                    <div class="col-6 col-md-4 container-userid">.col-6 .col-md-4</div>
                 </div>
-                </div>
-
                 <div class="container-footer">
+                    <!-- Footer -->
                     <footer>
                         <div class="container-enlace">
                             <a href="">¿Qué es MaxGrade?</a>

@@ -4,7 +4,7 @@ html {
 body{
     padding: 0;
     margin: 0;
-    background-image: url(../imglog/Imagen1.jpg);
+    background-image: url(../imglog/image.png);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
@@ -66,17 +66,21 @@ body{
 }
 
 footer{
-    background: #14185c;
-    border-top: 1px solid #000;
-    width: 100%; 
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1rem;
-    min-width: 480px;
-    flex-shrink: 0; 
-    flex-grow: 0;
+    background-color: rgb(68, 72, 75);
+    bottom: 0;
+    box-sizing: border-box;
+    color: var(--footer-text-color);
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    position: fixed;
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 25px;
+    padding-right: 25px;
+    z-index: 2;
 }
 
 .container-redes img{
@@ -221,10 +225,11 @@ button:active{
     height: 100%; 
     margin: 40px;
     flex-grow: 1; 
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
-
-.container-logo-login{
+.container-imglogo{
     text-align: center;
     width: 35%;
     display: flex;
@@ -239,6 +244,12 @@ button:active{
     min-height: 250px;
     min-width: 350px;
 }
+
+.container-logogrande {
+    height: 400px;
+    width: 400px;
+}
+
 .container-logo-login img{
     width: 80%;
     height: 80%;
