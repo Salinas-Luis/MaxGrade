@@ -1,7 +1,15 @@
-body {
+
+
+html, body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+}
+
+body {
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column;
+    overflow-x: hidden; 
 }
 
 .container-main {
@@ -9,21 +17,45 @@ body {
     gap: 20px;
     justify-content: center;
     padding: 20px;
-    padding-top: 20px;
-    height: 570px;
+    padding-top: 20px; 
     background-image: url(../img/fondo-azul-elegante-abstracto-con-espacio-de-texto.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 100vh;
-    margin-top: 80px;
+    flex-grow: 1; 
+}
+
+.container-header {
+    padding: 20px;
+    background-color: #1c106d;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 80px;
+    position: static;
+}
+
+footer {
+    background-color: rgb(68, 72, 75); 
+    box-sizing: border-box;
+    color: white;
+    font-size: 12px;
+    font-weight: bold; 
+    line-height: normal; 
+    padding: 0;
+    position: static;
+    margin-top: 0; 
+}
+footer div:last-child, footer p, footer ul {
+    margin-bottom: 0 !important;
 }
 
 .container-columna {
     padding: 20px;
     text-align: center;
-    flex: 1;
+    flex: 1 1 0%; 
 }
 
 .container-slogan {
@@ -39,19 +71,6 @@ body {
 .container-texto {
     font-size: 30px;
     font-family: 'Calibri', 'Trebuchet MS', sans-serif;
-}
-
-.container-header {
-    padding: 20px;
-    top: 0;
-    background-color: #1c106d;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    max-height: 80px;
-    
 }
 
 .logo {
@@ -72,24 +91,6 @@ img {
 
 .nav-link {
     color: #fff;
-}
-
-.footer {
-    background-color: rgb(68, 72, 75);
-    bottom: 0;
-    box-sizing: border-box;
-    color: var(--footer-text-color);
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 50px;
-    position: fixed;
-    width: 100%;
-    display: -webkit-flex;
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 25px;
-    padding-right: 25px;
-    z-index: 2;
 }
 
 .piramide {
@@ -114,8 +115,6 @@ img {
 }
 
 .elemento {
-    width: 200px;
-    height: 200px;
     background-color: #b4e3ff;
     display: flex;
     justify-content: center;
@@ -125,9 +124,14 @@ img {
     overflow: hidden;
     box-shadow: 2px 2px 0 #86a9bd;
     flex-direction: column;
-    padding: 15px;
+    padding: 15px; 
+    text-align: center;
+    width: auto; 
+    min-height: 100px;
 }
 
 .texto-info {
     font-size: 15px;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
 }
