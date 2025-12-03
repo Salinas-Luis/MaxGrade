@@ -1,229 +1,236 @@
+/* ============================================
+   1. Quitar separación entre columnas
+   ============================================ */
 
-html {
-    height: 100%;
+.user-reg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 40px auto;
+    gap: 0;
+    flex-wrap: wrap;
 }
 
-body{
-    padding: 0;
-    margin: 0;
-    background-image: url(../../public/img/Imagen1.jpg);
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-    background-attachment: fixed;
+.fondo {
+    background-image: url(../img/fondo-azul-elegante-abstracto-con-espacio-de-texto.jpg);
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+/* ============================================
+   2. Columna izquierda (Logo)
+   ============================================ */
+
+.container-logo-reg {
+    background-color: #E8ECF7; /* azul muy claro */
+    border-radius: 20px 0 0 20px;
+    height: 600px;
+    max-width: 450px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 0 20px rgba(20, 24, 92, 0.20);
+    padding: 2rem;
+}
+
+.container-logo-reg img {
+    width: 80%;
+    height: auto;
+}
+
+
+/* ============================================
+   3. Columna derecha (Formulario)
+   ============================================ */
+
+.container-userid {
+    background-color: #ffffff;
+    border-radius: 0 20px 20px 0;
+    height: 600px;
+    max-width: 450px;
+
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    box-shadow: 0 0 20px rgba(20, 24, 92, 0.20);
+    padding: 2rem 1.5rem;
 }
 
-.container-header{
-    background: #14185c;
-    padding: 10px;
-    border-bottom: 1px solid #000;
-    flex-shrink: 0; 
-    flex-grow: 0;
-}
-.container-nav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto; 
-}
 
-.container-logo img{
-    width: 200px; 
-    margin-left: 20px;
-}
+/* ============================================
+   4. ESTILO DE PESTAÑAS (Iniciar / Registro)
+   ============================================ */
 
-.container-header a{
+.buttons a {
     text-decoration: none;
-    color: white;
+    transition: 0.25s ease;
+    border-radius: 0;
+    padding: 6px 12px;
 }
 
-.enlace{
+/* Iniciar Sesión (inactivo) */
+.buttons a.btn-iniciar {
+    font-size: 0.95rem;
+    color: #6072A6; /* azul grisáceo suave */
+    border-bottom: 2px solid transparent;
+}
+
+.buttons a.btn-iniciar:hover {
+    color: #14185C;
+}
+
+/* Registro (activo) */
+.buttons a.btn-registro {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #14185C;
+    border-bottom: 2px solid #14185C;
+}
+
+
+/* ============================================
+   5. Inputs e iconos
+   ============================================ */
+
+.input-group-text {
+    background-color: #E8ECF7; /* azul claro */
+    color: #14185C;
+    border: 1px solid #C7D1EA;
+}
+
+.inputlog {
+    border: 1px solid #C7D1EA;
+}
+
+.inputlog:focus {
+    box-shadow: 0 0 0 .2rem rgba(20, 24, 92, 0.35);
+    border-color: #14185C;
+}
+
+
+/* ============================================
+   6. Semestres
+   ============================================ */
+
+.semestre {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.semestre label {
+    color: #14185C;
+    font-weight: 600;
 }
 
 
-.enlace a:hover{
-    border-bottom: 2px solid white;
-}
+/* ============================================
+   7. Botón Registrarse
+   ============================================ */
 
-.enlace a{
-    padding: 10px;
-    margin: 10px;
+.btn_reg {
+    background-color: #14185C;
+    padding: 0.75rem;
     text-align: center;
-    font-size: 1.1rem; 
-}
-
-.enlace3{
-    background-color: black; 
-    border-radius: 30px;
-}
-footer{
-    background: #14185c;
-    border-top: 1px solid #000;
-    width: 100%; 
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1rem;
-    flex-shrink: 0; 
-    flex-grow: 0;
-}
-
-.container-redes img{
-    width: 30px;
-    border-radius: 15px;
-}
-.container-redes a{
-    padding: 10px;
-    margin-left: 5px;
-}
-.container-redes a:hover{
-    border-bottom: 2px solid white;
-}
-.container-redes{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-}
-
-
-.container-enlace a{
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-}
-
-.container-enlace a:hover{
-    border-bottom: 2px solid white;
-}
-
-
-.user-reg{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%; 
-    margin: 40px;
-    flex-grow: 1; 
-}
-
-.container-logo-reg{
-    text-align: center;
-    width: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f2eae6;
-    margin-top: 20px;
-    border-radius: 20px 0px 0px 20px;
-    margin-bottom: 20px;
-    height: 600px;
-    max-height: 700px;
-    min-height: 250px;
-}
-.container-logo-reg img{
-    height: 80%;
-    margin: 0; 
-    padding: 0;
-    display: block;
-}
-.container-userid{
-   text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: white;
-    margin-top: 30px;
-    border-radius: 0px 20px 20px 0px;
-    margin-bottom: 30px;
-    height: 600px;
-    max-height: 700px;
-    min-height: 350px;
-    width: 35%;
-    padding: 10px;
-}
-
-.buttons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-    font-size: 1rem; 
-}
-.buttons a{
-    padding: 4px;
-    margin: 10px;
-    color: black;
-    text-decoration: none;
-    font-family: sans-serif;
-    box-shadow: 0 10px 28px rgba(0,0,0,0.1);
-    font-size: 1rem;
-}
-.buttons a:hover{
-    border-bottom: 2px solid #000;
-}
-
-.inputlog{
-    margin: 5px;
-    font-size: 1rem;
-}
-
-.inputlog:focus{
-    background-color: #f2eae6;
-}
-
-
-
-button:hover{
-    background-color: #0091d9;
-    border: 1px solid #000;
-}
-
-button:active{
-    background-color: #00577f;
-    border: 1px solid #000;
-}
-
-.button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-.btn_reg{
-    text-decoration: none;
-    background-color: #14185c;
-    color: white;
-    padding: 10px;
     border-radius: 10px;
-    margin-bottom: 50px;
-    font-size: 1rem;
-}
-.semestre{
-    margin-bottom: 50px;
-}
-.semestre input, label{
-    margin: 5px;
-    font-size: 1rem;
-}
-.inputreg{
-    margin: 5px;
-    font-family: sans-serif;
-    font-size: 1rem;
-    text-align: left;
-}
-#passreg{
-    width: 74%;
+    color: white;
+    width: 60%;
+    margin: auto;
+    transition: 0.2s;
 }
 
-#togglePassword {
-    cursor: pointer; 
+.btn_reg:hover {
+    background-color: #0D1147;
+}
+
+
+/* ============================================
+   8. Responsive
+   ============================================ */
+
+@media (max-width: 992px) {
+    .container-logo-reg,
+    .container-userid {
+        height: auto;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-logo-reg img {
+        width: 60%;
+    }
+
+    .btn_reg {
+        width: 90%;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}
+
+
+/* ============================================
+   HEADER Y NAVBAR
+   ============================================ */
+
+header {
+    background-color: #14185C; /* Azul principal */
+}
+
+.navbar {
+    background-color: #14185C; /* Asegura que toda la barra sea azul */
+}
+
+.navbar-brand img {
+    filter: brightness(100%); /* Mantener logo visible */
+}
+
+.nav-link {
+    color: #C7D1EA; /* Azul claro para enlaces */
+    transition: 0.25s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff; /* Al pasar el mouse, se vuelve blanco */
+    border-bottom: 2px solid #0D1147; /* Subrayado suave azul oscuro */
+}
+
+.navbar-toggler {
+    border-color: #C7D1EA; /* Color del borde del botón hamburguesa */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23C7D1EA' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3E%3C/svg%3E");
+}
+
+/* Para navbar colapsada en móviles */
+.navbar-collapse {
+    background-color: #14185C; /* Mismo azul para mantener contraste */
+}
+
+/* Íconos dentro del navbar */
+.icon-link svg {
+    fill: #C7D1EA;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+header {
+    background-color: #14185C; /* Azul principal */
+}
+
+header .container-xxl {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #14185C; /* Misma azul que header */
 }

@@ -18,13 +18,17 @@ body {
     justify-content: center;
     padding: 20px;
     padding-top: 20px; 
-    background-image: url(../img/fondo-azul-elegante-abstracto-con-espacio-de-texto.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    flex-grow: 1; 
+    flex-grow: 1;  
 }
+
+.fondo {
+    background-image: url("../img/fondo-azul-elegante-abstracto-con-espacio-de-texto.jpg");
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
 
 .container-header {
     padding: 20px;

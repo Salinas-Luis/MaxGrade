@@ -12,11 +12,11 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
-<body class="d-flex flex-column min-vh-100"> 
+<body class="d-flex flex-column min-vh-100 fondo"> 
     
-    <header class="bg-dark text-white sticky-top">
-    <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap bg-dark">
-    <div class="navbar navbar-dark w-100 p-0 navbar-expand-lg"> 
+    <header class="text-white sticky-top p-0">
+    <nav class="container-xxl p-0 bd-gutter flex-wrap flex-lg-nowrap bg-dark">
+    <div class="navbar navbar-dark w-100 p-0 navbar-expand-lg">
         <a class="navbar-brand" href="../index.html">
             <img src="../../public/img/maxgradeplacapng.png" alt="Logo MaxGrade" class="img-fluid" style="height: 40px; margin: 5px;">
         </a>
@@ -42,10 +42,19 @@
                 <img src="../../public/img/LogoPng.png" alt="" class="img-fluid"> 
             </div>
         <div class="container-userid">
-                <div class="buttons mb-3">
-                    <a href="../Login/login.ejs" class="btn btn-outline-secondary">Iniciar sesion</a>
-                    <a href="../Registro/registro.ejs" class="btn  btn-secondary me-0">Registro</a>
-                </div>
+                <div class="buttons mb-3 d-flex justify-content-center gap-3">
+
+    <a href="../Login/login.ejs"
+       class="btn-iniciar">
+       Iniciar sesión
+    </a>
+
+    <a href="../Registro/registro.ejs"
+       class="btn-registro">
+       Registro
+    </a>
+
+</div>
             <p style="font-size: 18px;">Registrar cuenta:</p>
             
             <div class="input-group mb-3">
