@@ -1,103 +1,188 @@
-.container-header{
-    background-color: #14185c;
-    text-align: center;
-    color: #f2eae6;
-    width: 100%;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.divimg img{
-    height: 80px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.divacio{
-    width: 6%;
-}
-.divimg{
+/*HEADER*/
+.container-header {
+    background-color: #14185c;
+    color: #f2eae6;
     width: 100%;
-    text-align: center;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.irperfil img{
-    width: 100%;
+
+.divimg img {
+    height: 60px;
+    max-width: 100%;
+}
+
+.irperfil img {
+    width: 60px;
     height: 60px;
 }
-.irperfil{
-    margin-right: 40px;
+
+.irperfil {
     background-color: #f2eae6;
     display: flex;
     align-items: center;
-    padding: 10px;
-    border-radius: 50px;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50%;
 }
 
-body{
+/*NAV*/
+.container-nav {
+    background-color: #21257a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.container-nav .divider {
+    display: inline-block;
+    width: 1px;
+    height: 25px;
+    background-color: #f2eae6;
+    margin: 0 10px;
+}
+
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
-.container-nav{
-    background-color: #21257a;
-    text-align: center;
-    height: auto;
-    padding: 5px;
-}
-.container-nav a{
-    text-decoration: none;
-    color: #f2eae6;
-    font-size: 25px;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(../img/fondo-azul-elegante-abstracto-con-espacio-de-texto.jpg);
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
 }
 
-.container-body{
-    border-radius: 15px;
+/*MAIN*/
+.container-body {
+    flex: 1;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    align-items: stretch;
     padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    
 }
-#lista-tareas-existentes{
+
+.container-body p {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*FOOTER*/
+.container-footer {
+    background-color: #14185c;
+    height: 60px;
+    width: 100%;
+}
+
+#lista-tareas-existentes {
     display: flex;
-    align-items: center;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
 }
-.tarjeta-tarea{
-    margin: 10px;
+
+.tarjeta-tarea {
+    background-color: #f8f8f8;
     padding: 15px;
-    width: 400px;
-    min-width: 250px;
-    max-width: 450px;
+    width: 100%;
+    max-width: 400px;
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .instrucciones-detalle {
-    max-height: 100px; 
-    overflow-y: auto; 
-    word-wrap: break-word; 
-    overflow-wrap: break-word; 
+    max-height: 100px;
+    overflow-y: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
     padding: 5px;
     border-top: 1px dashed #eee;
     margin-top: 10px;
 }
 
-.tarjeta-tarea button{
-    background-color: #14185c;
-    color: white;
-    border: 1px solid black;
-    padding: 4px;
+/*BOTONES*/
+
+.tarjeta-tarea button {
     border-radius: 4px;
+    padding: 6px 12px;
+    transition: background 0.2s;
 }
 
-.tarjeta-tarea button:hover{
+.tarjeta-tarea button:hover {
     background-color: #0091d9;
 }
+
+/*FOOTER*/
+.container-footer {
+    background-color: #14185c;
+    height: 60px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/*RESPONSIVO*/
+
+@media (max-width: 576px) {
+    .divimg img {
+        height: 50px;
+    }
+
+    .irperfil img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .container-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container-nav .divider {
+        display: none;
+    }
+
+    .container-nav a {
+        width: 80%;
+        text-align: center;
+    }
+
+    .container-body {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .tarjeta-tarea {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .tarjeta-tarea button {
+        width: 100%;
+    }
+}
+
