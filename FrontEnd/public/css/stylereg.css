@@ -145,6 +145,7 @@
     width: 60%;
     margin: auto;
     transition: 0.2s;
+    text-decoration: none;
 }
 
 .btn_reg:hover {
@@ -188,37 +189,35 @@ header {
 }
 
 .navbar {
-    background-color: #14185C; /* Asegura que toda la barra sea azul */
+    background-color: #14185C;
 }
 
 .navbar-brand img {
-    filter: brightness(100%); /* Mantener logo visible */
+    filter: brightness(100%);
 }
 
 .nav-link {
-    color: #C7D1EA; /* Azul claro para enlaces */
+    color: #C7D1EA;
     transition: 0.25s ease;
 }
 
 .nav-link:hover {
-    color: #ffffff; /* Al pasar el mouse, se vuelve blanco */
-    border-bottom: 2px solid #0D1147; /* Subrayado suave azul oscuro */
+    color: #ffffff;
+    border-bottom: 2px solid #0D1147;
 }
 
 .navbar-toggler {
-    border-color: #C7D1EA; /* Color del borde del botón hamburguesa */
+    border-color: #C7D1EA;
 }
 
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23C7D1EA' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3E%3C/svg%3E");
 }
 
-/* Para navbar colapsada en móviles */
 .navbar-collapse {
-    background-color: #14185C; /* Mismo azul para mantener contraste */
+    background-color: #14185C;
 }
 
-/* Íconos dentro del navbar */
 .icon-link svg {
     fill: #C7D1EA;
     margin-left: 4px;
@@ -226,11 +225,11 @@ header {
 }
 
 header {
-    background-color: #14185C; /* Azul principal */
+    background-color: #14185C;
 }
 
 header .container-xxl {
     padding-left: 0;
     padding-right: 0;
-    background-color: #14185C; /* Misma azul que header */
+    background-color: #14185C;
 }
