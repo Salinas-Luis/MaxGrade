@@ -1,103 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MaxGrade</title>
+    <title>MaxGrade | Bienvenido</title>
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="../public/css/styleindex.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/101326ea39.js" crossorigin="anonymous"></script>
     
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="/public/css/style.css"> 
 </head>
-<body>
 
+<body class="d-flex flex-column min-vh-100"> 
+    
     <header class="bg-dark text-white sticky-top">
-    <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap bg-dark">
-    <div class="navbar navbar-dark w-100 p-0 navbar-expand-lg"> 
-        <a class="navbar-brand" href="">
-            <img src="../public/img/maxgradeplacapng.png" alt="Logo MaxGrade" class="img-fluid" style="height: 40px; margin: 5px;">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav nav-underline">
-                    <li class="nav-item me-3">
-                     <a class="nav-link text-white icon-link" href="./">
-                            Conocenos
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmarks-fill" viewBox="0 0 16 16"></svg>
-                     </a>
-                    </li>
-                    <li class="nav-item">
-                         <a class="btn btn-primary" href="./Login/login.ejs" style="text-align: center;">
-                          Iniciar Sesion
-                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16"></svg>
-                        </a>
-                   </li>
-              </ul>
-         </div>
-     </div>
-    </nav>
+        <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap bg-dark">
+            <div class="navbar navbar-dark w-100 p-0 navbar-expand-lg"> 
+                <a class="navbar-brand" href="/">
+                    <img src="/public/img/maxgradeplacapng.png" alt="Logo MaxGrade" class="img-fluid" style="height: 40px; margin: 5px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav nav-underline">
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-white" href="#conocenos">Conócenos</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-white" href="/login">Iniciar Sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-primary text-white px-3" href="/registro">Registrarse</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <main class="container my-5">
-        <div class="row d-flex align-items-center">
-            
-            <div class="col-lg-6 col-md-12 text-center text-lg-start mb-4">
-                <div class="p-3">
-                    <h1 class="display-1 text-primary fw-bold">MaxGrade</h1>
-                    <p class="lead fs-2 mb-1">Empieza a organizar</p>
-                    <p class="lead fs-2 mb-4">bien tus Deberes</p>
-                    <button type="button" class="btn btn-primary btn-lg mt-3">Empezar</button>
+    <main class="flex-grow-1">
+        <section class="container py-5 text-center">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <img src="/public/img/LogoPng.png" alt="Logo" class="mb-4" style="max-width: 200px;">
+                    <h1 class="fw-light">Bienvenido a MaxGrade</h1>
+                    <p class="lead text-muted">La plataforma ideal para gestionar tus tareas escolares, recibir notificaciones personalizadas y conectar con tu grupo.</p>
+                    <p>
+                        <a href="/registro" class="btn btn-primary my-2">Comenzar ahora</a>
+                        <a href="/login" class="btn btn-secondary my-2">Ya tengo cuenta</a>
+                    </p>
                 </div>
             </div>
+        </section>
 
-            <div class="col-lg-6 col-md-12">
-                <div class="row justify-content-center text-center p-3">
-                    
-                    <div class="col-12 mb-4">
-                        <div class="card p-3 shadow-sm h-100 d-flex flex-column align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#2f4550" class="bi bi-bell-fill mb-2" viewBox="0 0 16 16">
-                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
-                            </svg>
-                            <p class="text-info small mb-0">Recibe recordatorios con la frecuencia exacta que elijas usando **Intervalos Dinámicos**</p>
-                        </div>
+        <section id="conocenos" class="bg-light py-5">
+            <div class="container text-center">
+                <h2>¿Qué puedes hacer en MaxGrade?</h2>
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <i class="fa-solid fa-chalkboard-user fa-3x mb-3 text-primary"></i>
+                        <h4>Para Profesores</h4>
+                        <p>Crea tareas, asígnalas a grupos específicos y califica las entregas de tus alumnos.</p>
                     </div>
-
-                    <div class="col-md-6 mb-4">
-                        <div class="card p-3 shadow-sm h-100 d-flex flex-column align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#2f4550" class="bi bi-list-ol mb-2" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5"/>
-                                <path d="M1.713 11.865v-.474H2c.217 0 .363-.137.363-.317 0-.185-.158-.31-.361-.31-.223 0-.367.152-.373.31h-.59c.016-.467.373-.787.986-.787.588-.002.954.291.957.703a.595.595 0 0 1-.492.594v.033a.615.615 0 0 1 .569.631c.003.533-.502.8-1.051.8-.656 0-1-.37-1.008-.794h.582c.008.178.186.306.422.309.254 0 .424-.145.422-.35-.002-.195-.155-.348-.414-.348h-.3zm-.004-4.699h-.604v-.035c0-.408.295-.844.958-.844.583 0 .96.326.96.756 0 .389-.257.617-.476.848l-.537.572v.03h1.054V9H1.143v-.395l.957-.99c.138-.142.293-.304.293-.508 0-.18-.147-.32-.342-.32a.33.33 0 0 0-.342.338zM2.564 5h-.635V2.924h-.031l-.598.42v-.567l.629-.443h.635z"/>
-                            </svg>
-                            <p class="text-info small mb-0">Crea y gestiona proyectos colaborativos con visibilidad en **tiempo real** del progreso</p>
-                        </div>
+                    <div class="col-md-4">
+                        <i class="fa-solid fa-user-graduate fa-3x mb-3 text-primary"></i>
+                        <h4>Para Alumnos</h4>
+                        <p>Consulta tus pendientes, envía tus trabajos y configura la frecuencia de tus notificaciones.</p>
                     </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="card p-3 shadow-sm h-100 d-flex flex-column align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="#2f4550" class="bi bi-calendar-check-fill mb-2" viewBox="0 0 16 16">
-                                <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-5.146-5.146-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
-                            </svg>
-                            <p class="text-info small mb-0">El Calendario Integrado te permite organizar y planificar tareas y reuniones con claridad</p>
-                        </div>
+                    <div class="col-md-4">
+                        <i class="fa-solid fa-bell fa-3x mb-3 text-primary"></i>
+                        <h4>Notificaciones</h4>
+                        <p>Tú decides cuándo quieres ser recordado de tus entregas próximas.</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
-    
-    <footer class="mt-auto">
-        <div class="container py-3 px-4 text-body-secondary d-flex justify-content-center align-items-center">
-            
-            <span class="text-white d-block m-0 p-0 text-center">
-                Derechos Reservados a Maxgrade
-            </span>
-            
+
+    <footer class="container-footer mt-auto bg-dark text-white py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 small">© 2026 MaxGrade. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white me-3"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

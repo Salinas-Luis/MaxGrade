@@ -1,29 +1,45 @@
-const express = require('express');
-const mysql = require('mysql2');
-const bodyParser = require('body-parser');
-const ejs = require('ejs');
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+import cors from 'cors';
 
-require('dotenv').config({path: './.env'});
+import userRoutes from './routes/userRoutes.js';
+import taskRoutes from './routes/taskRoutes.js';
+
+dotenv.config();
 
 const app = express();
-const port = 3000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const frontendPath = path.resolve(__dirname, '..', 'Frontend');
 
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use('/public', express.static(path.join(frontendPath, 'public')));
+app.use('/views', express.static(path.join(__dirname, 'views')));
 
+app.set('views', path.join(frontendPath, 'views'));
 app.set('view engine', 'ejs');
-app.set('views', __dirname + '/views');
 
-app.use(express.static('public'));
-
-app.get('/', (req, res)=>{
-        res.render('index'); 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(frontendPath,'views', 'index.html'));
 });
 
-app.get('/Login/login', (req,res) =>{
+app.get('/registro', (req, res) => {
+    res.render('Registro/registro');
+});
+
+app.get('/login', (req, res) => {
     res.render('Login/login');
 });
-app.listen(port, () => {
-    console.log(`Servidor corriendo en http://localhost:${port}`);
+
+app.use('/api/usuarios', userRoutes);
+app.use('/api/tareas', taskRoutes);
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Servidor en: http://localhost:${PORT}`);
 });
