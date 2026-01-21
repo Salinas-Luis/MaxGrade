@@ -4,7 +4,11 @@ import { registrarUsuario, loginUsuario, actualizarNotificaciones, obtenerCompan
 const router = express.Router();
 
 router.post("/registrar", registrarUsuario);
+
 router.post("/login", loginUsuario);
+
 router.put("/configurar-notificaciones", actualizarNotificaciones);
+
 router.get("/companeros/:grupo_id", obtenerCompaneros);
+
 export default router;

@@ -6,6 +6,8 @@ import cors from 'cors';
 
 import userRoutes from './routes/userRoutes.js';
 import taskRoutes from './routes/taskRoutes.js';
+import materiaRoutes from "./routes/materiaRoutes.js";
+import calificacionRoutes from "./routes/calificacionRoutes.js";
 
 dotenv.config();
 
@@ -38,6 +40,8 @@ app.get('/login', (req, res) => {
 
 app.use('/api/usuarios', userRoutes);
 app.use('/api/tareas', taskRoutes);
+app.use("/api/materias", materiaRoutes);
+app.use("/api/calificaciones", calificacionRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

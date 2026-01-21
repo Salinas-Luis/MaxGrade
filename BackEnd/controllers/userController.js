@@ -58,10 +58,13 @@ export const loginUsuario = async (req, res) => {
 
     res.status(200).json({
       message: "Bienvenido",
-      user: {
+user: {
         id: usuario.nombre_id,
         nombre: usuario.nombre_completo,
-        rol: usuario.rol 
+        rol: usuario.rol,
+        carrera_id: usuario.carrera_id, 
+        semestre: usuario.semestre,    
+        grupo_id: usuario.grupo_id    
       }
     });
   } catch (error) {
